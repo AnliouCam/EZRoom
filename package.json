@@ -1,0 +1,18 @@
+{
+  "name": "ezroom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "eslint": "^10.1.0",
+    "jest": "^30.3.0"
+  }
+}

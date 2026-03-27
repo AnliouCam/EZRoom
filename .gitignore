@@ -1,0 +1,25 @@
+# Dépendances Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/
+
+# Variables d'environnement
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Documentation (gérée séparément)
+docs/
