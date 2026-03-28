@@ -1,15 +1,24 @@
 {
   "name": "ezroom",
   "version": "1.0.0",
-  "description": "",
+  "description": "Application de réservation de salles - IUA Master 2 Génie Informatique",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "test:bdd": "cucumber-js",
+    "lint": "eslint src/ --ext .js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "lines": 80
+      }
+    }
+  },
   "devDependencies": {
     "@cucumber/cucumber": "^12.7.0",
     "eslint": "^10.1.0",

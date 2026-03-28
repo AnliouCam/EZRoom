@@ -1,0 +1,31 @@
+name: CI EZRoom
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Linting ESLint
+        run: npx eslint src/ --ext .js || true
+
+      - name: Tests unitaires Jest
+        run: npx jest --coverage
+
+      - name: Tests BDD Cucumber
+        run: npx cucumber-js
